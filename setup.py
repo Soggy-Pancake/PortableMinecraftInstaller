@@ -171,16 +171,6 @@ if(not os.path.exists("java")):
 
 
 #Get input for multiMC or cracked version of minecraft to use
-
-launcher = input("Download MultiMC or TL Legacy? (M/t)").casefold()
-print(launcher)
-
-if stringInArray(launcher, ["multi", 'm', "multimc"]):
-    print("MULTIMC")
+if __name__ == "__main__":
     installMultiMC()
-    os.system("runMinecraft.bat")
-
-if stringInArray(launcher, ['tl', 't', 'cracked', 'crack']):
-    print("TLAUNCHER")
-    installCracked()
     os.system("runMinecraft.bat")
